@@ -22,4 +22,5 @@ fun main() {
     //Char
     val c = 'A'
     println(c)
+    println(weight)
 }
