@@ -17,14 +17,14 @@ fun main() {
     //list
     val list = listOf<Int>(2,5,8)  //不可變list
     println("list is $list")
-    println("list[2] is $list[2]")
+    println("list[2] is ${list[2]}")
     println(list[2])
 
     val list01 = mutableListOf<Int>(2,5,8)  //可變list
     list01.add(13)
     list01.removeAt(1)
     println("list01 is $list01")
-    println("list01[2] is $list01[2]")
+    println("list01[2] is ${list01[2]}")
     println(list01[2])
 
     //Array
