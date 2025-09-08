@@ -34,11 +34,11 @@ fun main() {
     println(array[2])
 
     println("Chapter 2 Unit 8 Null Check")
-    var name:String = "Hank"
+    val name:String = "Hank"
     println(name.length)
-    var name01:String? = null
+    val name01:String? = null
     println(name01?.length)
-    var name02:String? ="Emily"
+    val name02:String? ="Emily"
     println(name02?.length)
     //Elvis ?:
     //如果左邊是Null就給右邊的值

@@ -4,9 +4,9 @@ import kotlin.random.Random
 
 fun main() {
     println("Hello Guessing C2U9~12")
-    println(Random.nextInt(1,11))
+    println(Random.nextInt(1,11))  //說明Random取亂數
     //println((1..10).random())
-    var secret = (1..10).random()
+    var secret = (1..10).random()  //這個程式使用這個方法
     println("Secret number is $secret")
     var num = 0
     while (num != secret) {
