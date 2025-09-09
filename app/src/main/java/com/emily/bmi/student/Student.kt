@@ -7,7 +7,8 @@ package com.emily.bmi.student
 class Student(val id: String, val name: String, var english: Int = 0, var math: Int = 0) {
     //constructor(id: String, name: String) : this(id, name, 0, 0)
     fun print() {
-        println("$id\t$name\t$english\t$math\t${average()}\t${average01()}\t${grading()}\t${grading01()}\t${grading02()}")
+        val mark = if(average() > pass) " " else "*"
+        println("$id\t$name\t$english\t$math\t${average()}$mark\t${average01()}\t${grading()}\t${grading01()}\t${grading02()}")
     }
 
     fun average(): Int {
@@ -42,6 +43,12 @@ class Student(val id: String, val name: String, var english: Int = 0, var math: 
         7 -> "C"
         6 -> "D"
         else -> "F"
+    }
+
+    //Companion Object C3U7
+    companion object {
+        val pass = 60
+
     }
 }
 
