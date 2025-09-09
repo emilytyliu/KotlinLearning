@@ -8,10 +8,14 @@ fun main() {
     val input = File("order.txt").bufferedReader()
     var line = input.readLine()
     while (line != null) {
+        println(line)
         val taken = line.split(",")
-        val drink = Drink(taken[0],taken[1].toInt(),taken[2].toInt())
-        println(drink)
-        drinks.add(drink)
+        try {
+            val drink = Drink(taken[0],taken[1].toInt(),taken[2].toInt())
+            drinks.add(drink)
+        } catch (ex: IndexOutOfBoundsException){
+            println("Invalid data format!")
+        }
         line = input.readLine()
     }
     println(drinks)

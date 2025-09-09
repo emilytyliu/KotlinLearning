@@ -13,7 +13,7 @@ fun main() {
     for (i in drinks) {
         out.println("${i.name},${i.suger},${i.price}")
     }
-    out.flush()
+    out.flush() 
 
     val out01 = File("order01.txt").bufferedWriter()
     for (i in drinks) {
