@@ -11,7 +11,7 @@ open class Student(val id: String, val name: String, var english: Int = 0, var m
         println("$id\t$name\t$english\t$math\t${average()}$mark\t${average01()}\t${grading()}\t${grading01()}\t${grading02()}")
     }
 
-    fun average(): Int {
+    protected fun average(): Int {
         return (english + math) / 2
     }
 
