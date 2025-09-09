@@ -47,23 +47,36 @@ class Student(val id: String, val name: String, var english: Int = 0, var math: 
 
     //Companion Object C3U7
     companion object {
-        val pass = 60
+        var pass = 60
+        val curry = Student("004", "Curry", 10,10)
+        val john = Student("005", "John", 20, 20)
+        fun create(id: String, name: String = "K", english: Int = 0 , math: Int = 0 ): Student {
+            if (id == "004") return curry
+            else if (id =="005") return john
+            return Student(id, name, english, math )
+        }
 
     }
 }
 
 fun main() {
 
-    val stu1 = Student("001", "Jack", 95, 99)
+
+    val stu1 = Student("001", "Jack", 30, 75)
     val stu2 = Student("002", "Hank", 66, 87)
     val stu3 = Student("003", "Jane")
+    val stu4 = Student.create("004", "K", 82,65)
+    val stu5 = Student.create("005")
     stu1.print()
     stu2.print()
     stu3.print()
+    stu4.print()
+    stu5.print()
     println()
 
+    Student.pass = 50
     val students = listOf<Student>(
-        Student("001", "Jack", 95, 99),
+        Student("001", "Jack", 30, 75),
         Student("002", "Hank", 66, 87),
         Student("003", "Jane")
     )
