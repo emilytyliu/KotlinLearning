@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Bmi</string>
     <string name="ok">確認</string>
+    <string name="enter_number">Enter a number</string>
 </resources>
