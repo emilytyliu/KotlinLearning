@@ -9,4 +9,13 @@ fun main() {
         report.load()
         report.print("Test")
     }
+
+    println()
+    val myreports = listOf<MyReport>(
+        SalaryReport()
+    )
+    for (myreport in myreports){
+        myreport.load()
+        myreport.print()
+    }
 }
